@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="left">
+            <div class="header">
+                <h2 class="animation a1">Login</h2>
+                <h4 class="animation a2">Log in to your account using username and password</h4>
+            </div>
+            <div class="form">
+                <input type="username" class="form-field animation a3" placeholder="Username">
+                <input type="password" class="form-field animation a4" placeholder="Password">
+                <p class="animation a5"><a href="#">Forgot Password</a></p>
+                <button class="animation a6" onclick="loginClicked()">LOGIN</button>
+            </div>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
 
 </body>
 </html>

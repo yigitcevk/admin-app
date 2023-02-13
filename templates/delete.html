@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Delete</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/delete.js') }}"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="left">
+            <div class="header">
+                <h2 class="animation a1">Delete User</h2>
+                <h4 class="animation a2">Please enter username to delete user</h4>
+            </div>
+            <div class="form">
+                <input type="username" class="form-field animation a3" placeholder="Username">
+                <button class="animation a4" onclick="deleteUserClicked()">DELETE USER</button>
+            </div>
+        </div>
+        <div class="right">
 
+        </div>
+    </div>
 </body>
 </html>

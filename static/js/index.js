@@ -1,27 +1,27 @@
-async function loginFunction(){
-    window.location.href = "/login";
+async function navigateLogin(){
+    window.location.href = "/loginpage";
 }
 
-async function logoutFunction(){
-    window.location.href = "/logout";
+async function navigateLogout(){
+    window.location.href = "/logoutpage";
 }
 
-async function deleteFunction(){
-    window.location.href = "/delete";
+async function navigateDelete(){
+    window.location.href = "/deletepage";
 }
 
-async function updateFunction(){
-    window.location.href = "/update";
+async function navigateUpdate(){
+    window.location.href = "/updatepage";
 }
 
-async function onlineUsersFunction(){
+async function navigateOnlineUsers(){
     window.location.href = "/onlineusers";
 }
 
-async function userListFunction(){
+async function navigateUserList(){
     window.location.href = "/user/list";
 }
 
-async function userCreateFunction(){
-    window.location.href = "/user/create";
+async function navigateUserCreate(){
+    window.location.href = "/usercreatepage";
 }

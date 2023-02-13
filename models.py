@@ -20,9 +20,6 @@ class Home(Resource):
 
 
 class Login(Resource):
-    def get(self):
-        return make_response(render_template("login.html"), 200, {"status": "success"})
-
     def post(self):
         conn = get_db_connection()
         cur = conn.cursor()
@@ -59,10 +56,12 @@ class Login(Resource):
         conn.close()
 
 
-class Logout(Resource):
+class LoginPage(Resource):
     def get(self):
-        return make_response(render_template("logout.html"), 200, {"status": "success"})
+        return make_response(render_template("login.html"), 200, {"status": "success"})
 
+
+class Logout(Resource):
     def delete(self):
         conn = get_db_connection()
         cur = conn.cursor()
@@ -79,6 +78,11 @@ class Logout(Resource):
         conn.close()
 
 
+class LogoutPage(Resource):
+    def get(self):
+        return make_response(render_template("logout.html"), 200, {"status": "success"})
+
+
 class UserList(Resource):
     def get(self):
         users = get_db_users_data()
@@ -87,9 +91,6 @@ class UserList(Resource):
 
 
 class UserCreate(Resource):
-    def get(self):
-        return make_response(render_template("usercreate.html"), 200, {"status": "success"})
-
     def post(self):
         conn = get_db_connection()
         cur = conn.cursor()
@@ -121,10 +122,12 @@ class UserCreate(Resource):
         conn.close()
 
 
-class Delete(Resource):
+class UserCreatePage(Resource):
     def get(self):
-        return make_response(render_template("delete.html"), 200, {"status": "success"})
+        return make_response(render_template("usercreate.html"), 200, {"status": "success"})
 
+
+class Delete(Resource):
     def delete(self):
         conn = get_db_connection()
         cur = conn.cursor()
@@ -135,16 +138,18 @@ class Delete(Resource):
         else:
             return 'id must be defined', 400
 
-        cur.execute('''delete from users where username LIKE username''', (usernametemp,))
+        cur.execute('''delete from users where username=%s''', (usernametemp,))
         conn.commit()
         cur.close()
         conn.close()
 
 
-class Update(Resource):
+class DeletePage(Resource):
     def get(self):
-        return make_response(render_template("update.html"), 200, {"status": "success"})
+        return make_response(render_template("delete.html"), 200, {"status": "success"})
 
+
+class Update(Resource):
     def put(self, id):
         print(id)
 
@@ -174,6 +179,11 @@ class Update(Resource):
         conn.commit()
         cur.close()
         conn.close()
+
+
+class UpdatePage(Resource):
+    def get(self):
+        return make_response(render_template("update.html"), 200, {"status": "success"})
 
 
 class OnlineUsers(Resource):

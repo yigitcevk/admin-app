@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Logout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/logout.js') }}"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="left">
+            <div class="header">
+                <h2 class="animation a1">Logout</h2>
+                <h4 class="animation a2">Log out to your account using username</h4>
+            </div>
+            <div class="form">
+                <input type="username" class="form-field animation a3" placeholder="Username">
+                <button class="animation a3" onclick="logoutClicked()">LOGOUT</button>
+            </div>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
 
 </body>
 </html>

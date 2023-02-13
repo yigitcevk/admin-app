@@ -10,25 +10,26 @@
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 <body>
     <div class="container">
-  <div class="left">
-    <div class="header">
-      <h2 class="animation a1">Welcome Back</h2>
-      <h4 class="animation a2">You can choose your process to execute</h4>
-    </div>
-    <div class="form">
-      <button class="animation a3" id="login" onclick="loginFunction()">LOGIN</button>
-      <button class="animation a4" id="logout" onclick="logoutFunction()">LOGOUT</button>
-      <button class="animation a5" id="userlist" onclick="userListFunction()">LIST USERS</button>
-      <button class="animation a6" id="onlineusers" onclick="onlineUsersFunction()">LIST ONLINE USERS</button>
-      <button class="animation a7" id="usercreate" onclick="userCreateFunction()">CREATE USER</button>
-      <button class="animation a8" id="update" onclick="updateFunction()">UPDATE USER</button>
-      <button class="animation a9" id="delete" onclick="deleteFunction()">DELETE USER</button>
-    </div>
-  </div>
-  <div class="right"></div>
-</div>
+        <div class="left">
+            <div class="header">
+                <h2 class="animation a1">Welcome Back</h2>
+                <h4 class="animation a2">You can choose your process to execute</h4>
+            </div>
+            <div class="form">
+                <button class="animation a3" id="login" onclick="navigateLogin()">LOGIN</button>
+                <button class="animation a4" id="logout" onclick="navigateLogout()">LOGOUT</button>
+                <button class="animation a5" id="userlist" onclick="navigateUserList()">LIST USERS</button>
+                <button class="animation a6" id="onlineusers" onclick="navigateOnlineUsers()">LIST ONLINE USERS</button>
+                <button class="animation a7" id="usercreate" onclick="navigateUserCreate()">CREATE USER</button>
+                <button class="animation a8" id="update" onclick="navigateUpdate()">UPDATE USER</button>
+                <button class="animation a9" id="delete" onclick="navigateDelete()">DELETE USER</button>
+            </div>
+        </div>
+        <div class="right">
 
+        </div>
     </div>
+
 </body>
 
 </html>

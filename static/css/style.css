@@ -34,6 +34,32 @@ body {
   background-position: center;
 }
 
+.user-list {
+  display: inline-block;
+  flex: 1;
+  background-color: black;
+  background-image: url(https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.user-list-form {
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  justify-content: center;
+  animation-name:top;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
 
 
 .header > h2 {
@@ -153,6 +179,19 @@ body {
 }
 
 @keyframes left {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    padding: 20px 40px;
+    width: 440px;
+  }
+}
+
+@keyframes top {
   0% {
     opacity: 0;
     width: 0;

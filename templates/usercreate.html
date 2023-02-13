@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Create User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/usercreate.js') }}"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="left">
+            <div class="header">
+                <h2 class="animation a1">Create User</h2>
+                <h4 class="animation a2">Please enter lines to create user</h4>
+            </div>
+            <div class="form">
+                <input type="username" class="form-field animation a3" placeholder="Username">
+                <input type="firstname" class="form-field animation a3" placeholder="First Name">
+                <input type="middlename" class="form-field animation a4" placeholder="Middle Name">
+                <input type="lastname" class="form-field animation a5" placeholder="Last Name">
+                <input type="birthdate" class="form-field animation a6" placeholder="Birth Date">
+                <input type="email" class="form-field animation a7" placeholder="E-mail">
+                <input type="password" class="form-field animation a8" placeholder="Password">
+                <button class="animation a6" onclick="createUserClicked()">CREATE USER</button>
+            </div>
+        </div>
+        <div class="right">
 
+        </div>
+    </div>
 </body>
 </html>
